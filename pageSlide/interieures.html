@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initiale-scale=1" />
+	<title>Exercice final Front end</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/8a486cdba2.js" crossorigin="anonymous"></script>
+	
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.pageslide.css">
+	<!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>	
+</head>
+
+<body>
+	<div id="container">
+		<header>
+
+			<a href="index.html" title="retour accueil"><h1><img src="images/bandeau.jpg" alt="bandeau"></h1></a>
+		
+			<!-- <a class="open" href="#js-menu">Menu</a> -->
+
+			<!-- <nav id="js-menu" class="menu">
+				<h4>Navigation principale</h4> -->
+			<nav id="navMenu">
+				<ul id="menu">
+					<li><a href="index.html" title="Accueil">Accueil</a></li>
+					<li><a href="presentation.html" title="Présentation" >Présentation</a></li>
+					<li><a href="#" title="Les Planètes" >Les Planètes</a>
+						<ul id="sousmenu">
+							<li><a href="interieures.html" title="Intérieures" class="test" active>Intérieures</a></li>
+							<li><a href="geantes.html" title="Géantes" class="test">Géantes</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html" title="Contact" >Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<aside id="animation">
+				<h4>Cliquez sur les boutons pour déclencher la rotation</h4>
+				<ul id="">
+					<li>
+						<label for="mercure"></label>
+						<input type="button" value="Mercure" id="mercure">
+					</li>
+					<li>
+						<label for="venus"></label>
+						<input type="button" value="Vénus" id="venus">
+					</li>
+					<li>
+						<label for="terre"></label>
+						<input type="button" value="Terre" id="terre">
+					</li>
+					<li>
+						<label for="mars"></label>
+						<input type="button" value="Mars" id="mars">
+					</li>
+					<li>
+						<label for="animation"></label>
+						<input type="button" value="Animation" id="animation">
+					</li>
+					<li>
+						<label for="reset"></label>
+						<input type="reset" value="Reset" id="reset">
+					</li>
+					
+				</ul>
+			</aside>
+			<section id="planetes1">
+				<div id="interieures">
+					<figure id="soleil">
+						<!-- <img src="images/soleil.png" alt="soleil"> -->
+					</figure>
+						<figure id="merc">	
+							<!-- <img src="images/mercure.png" alt="mercure"> -->
+						</figure>
+						<figure id="ven">
+							<!-- <img src="images/venus.png" alt="venus"> -->
+						</figure>
+						<figure id="ter">
+							<!-- <img src="images/terre.png" alt="terre"> -->
+						</figure>
+						<figure id="mar">
+							<!-- <img src="images/mars.png" alt="mars"> -->
+						</figure>
+					
+				</div>
+			</section>
+			
+		</main>
+		
+		<footer>
+			<nav id="navFoot">
+				<ul id="menuFoot">
+					<li class="border"><a href="index.html" title="retour accueil">Accueil</a></li>
+					<li class="border"><a href="#" title="mentions légales">Mentions légales</a></li>
+					<li><a href="contact.html" title="page contact">Contact</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
+	<!--on ne met pas le script dans le head car le plug-in crée une div-->
+	<script type="text/javascript">
+		$(".open").pageslide();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initiale-scale=1" />
+	<title>Exercice final Front end</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/8a486cdba2.js" crossorigin="anonymous"></script>
+	
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.pageslide.css">
+	<!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>	
+</head>
+
+<body>
+	<div id="container">
+		<header>
+
+			<a href="index.html" title="retour accueil"><h1><img src="images/bandeau.jpg" alt="bandeau"></h1></a>
+		
+			<!-- <a class="open" href="#js-menu">Menu</a> -->
+
+			<!-- <nav id="js-menu" class="menu">
+				<h4>Navigation principale</h4> -->
+			<nav id="navMenu">
+				<ul id="menu">
+					<li><a href="index.html" title="Accueil">Accueil</a></li>
+					<li><a href="presentation.html" title="Présentation" >Présentation</a></li>
+					<li><a href="#" title="Les Planètes" >Les Planètes</a>
+						<ul id="sousmenu">
+							<li><a href="interieures.html" title="Intérieures" class="test">Intérieures</a></li>
+							<li><a href="geantes.html" title="Géantes" class="test" active>Géantes</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html" title="Contact" >Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="planetes2">
+				<h4>Cliquez sur les planètes pour plus d'infos</h4>
+				<div id="geantes">						
+					<figure id="jupiter" class="quatuor">
+						<img src="images/jupiter.png" alt="Jupiter">
+						<figcaption>Jupiter</figcaption>
+					</figure>
+				
+					<figure id="saturne" class="quatuor">
+						<img src="images/saturne.png" alt="Saturne">
+						<figcaption>Saturne</figcaption>
+					</figure>
+				
+					<figure id="uranus" class="quatuor">
+						<img src="images/uranus.png" alt="Uranus">
+						<figcaption>Uranus</figcaption>
+					</figure>
+
+					<figure id="neptune" class="quatuor">
+						<img src="images/neptune.png" alt="Neptune">
+						<figcaption>Neptune</figcaption>
+					</figure>
+				
+				</div>
+				
+			</section>
+			
+
+		</main>
+		
+		<footer>
+			<nav id="navFoot">
+				<ul id="menuFoot">
+					<li class="border"><a href="index.html" title="retour accueil">Accueil</a></li>
+					<li class="border"><a href="#" title="mentions légales">Mentions légales</a></li>
+					<li><a href="contact.html" title="page contact">Contact</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</div>
+
+	<div id="popup">
+		<img src="" alt="">
+		<h2>Planète</h2>
+		<span id="croix">X</span>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui asperiores incidunt hic sed commodi explicabo dolor eaque iusto at ut, recusandae, placeat repellendus quia, nemo corrupti. Beatae debitis iure fuga quae minus rem eum doloremque fugit corporis quidem perferendis quia, repellat deserunt? Dolores, perferendis mollitia velit fugiat deserunt provident voluptatibus?</p>
+		
+	</div>
+	
+	<script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
+	<!--on ne met pas le script dans le head car le plug-in crée une div-->
+	<script type="text/javascript">
+		$(".open").pageslide();
+	</script>
+</body>
+
+</html>

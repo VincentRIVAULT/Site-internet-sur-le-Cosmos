@@ -1,0 +1,704 @@
+/*************************Plugin PageSlider*************************/
+/*
+
+html{
+	font-size:100%;
+}
+html,body{
+	height:100%;
+}
+body{
+	max-width:940px;
+	width:96%;
+	margin:0 auto;
+	padding:50px 2%;
+	box-shadow:0 0 1px #999;
+	font-size:1em;
+	line-height:1.5em;
+}
+.open{
+	display:block;
+	width:40px;
+	height:30px;
+	background: url(../images/menu.png) center no-repeat #999;
+	border-radius:8px;
+	text-indent:-999em;
+}
+h1{
+	margin-top: 0;
+	margin-bottom:30px;
+}
+
+h4 {
+	display: none;
+}
+
+.menu a{
+	float:left;
+	width:20%;
+	padding:0;
+	background-color:#ff9900;
+	border-radius:50px 0;
+	background-color:black;
+	border-radius:50px 50px 0 50px;
+	border: 1px solid white;
+	line-height:2em;
+	color:#333;
+	color: white;
+	text-decoration:none;
+	text-align:center;
+}
+a:hover{
+	opacity:0.7;
+}
+.menu{
+	display:none;
+	width: 100%;
+}
+
+#pageslide .menu{
+	display:block;
+}
+#pageslide .menu a{
+	float:none;
+	display:block;
+	width:100%;
+	color:#FFF;
+	border-bottom:1px solid #000;
+	box-shadow:0 1px 0 #555;
+	border-radius:0;
+	background:none;
+	text-align:left;
+}
+
+@media only screen and (min-width:35em){
+.menu{
+	display:block;
+}
+.open{
+	display:none;
+}
+h4 {
+	display:block;
+}
+
+*/
+
+/*************************CSS PERSO*************************/
+
+/*************************page ACCUEIL**********************/
+
+body {
+	width:100%;
+	font-family: 'Audiowide', cursive;
+	font-size: 1em;
+	background-color: black;
+	color: white;
+	padding: 0;
+}
+
+#container {
+	width: 90%;
+	max-width: 1024px;
+	margin: 0 auto;
+	border: 1px solid white;
+}
+
+header {
+	width: 100%;
+	margin: 0 0 20px 0 auto;
+}
+
+#bandeau {
+	width: 100%;
+	margin: 0 auto;
+	vertical-align: top;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+#navMenu {
+	width: 90%;
+	margin: 0 auto;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#menu {
+	display: flex;
+	justify-content: space-around;
+}
+
+#menu li {
+	width: 100%;
+	padding: 0;
+	margin: 0 20px;
+	position: relative;
+}
+
+#menu li a {
+	display: block; 
+	text-decoration: none;
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 0;
+	background:linear-gradient(to right, gray, black);
+	border-radius:50px 50px 0 50px;
+	border: 1px solid white;
+	}
+
+#sousmenu {
+	width: 100%;
+	display: none; 
+	flex-direction: column; 
+	padding: 0;
+	position: absolute;
+	z-index: 9;
+}
+#sousmenu li {
+	width: 100%;
+	margin-top: 10px;
+	margin-left: -4px;
+}
+#menu li:hover #sousmenu {
+	display: block;
+}
+
+.test {
+	display: none;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+#content {
+	width: 30%;
+}
+
+#contenu{
+	width:100%; 
+	min-width:200px;
+	margin:0 auto;
+}
+#contenu li{
+	display:block; 
+	position:relative; 
+	cursor:pointer;
+}
+#contenu li h3{
+	background-color: #4c4c4c;
+	border-radius: 50px;
+	padding-left: 5px
+}
+#contenu li p {
+	font-size: 12px; 
+	display:none;
+}
+#contenu li span {
+	position:absolute; 
+	right:10px; 
+	top:0;
+}
+
+#bienvenue {
+	width: 68%;
+	border: 1px solid white;
+	box-shadow: 5px 5px 10px white;
+}
+
+#bienvenue h2 {
+	text-align: center;
+}
+
+#espace {
+	width: 100%;
+	margin: 0;
+}
+
+#galerie1 {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+#galerie1 a {
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding: 0 10px;
+}
+
+figure {
+	margin: 0;
+}
+
+.trio {
+	width: 100%;
+	margin: 0;
+}
+
+#galerie1 a:hover {
+	transform: rotate(45deg);
+	transition: 3s;
+}
+
+#astronaute {
+	background-image: url("../images/cosmonaute.png");
+	background-repeat: no-repeat;
+	width: 84px;
+	height: 88px;
+	position: absolute;
+	animation: astronaute 10s ease-out alternate infinite;
+	
+}
+
+@keyframes astronaute {
+	from {
+		top: 450px;
+		left: -180px;
+		transform:rotate(0deg) scale(0.1);
+		}
+
+	to {
+		top: 70px;
+		left: 750px;
+		transform:rotate(360deg) scale(1);
+		}
+}
+
+#astronaute p {
+	font-size: 2em;
+	color: white;
+	display: none;
+}
+
+#astronaute:hover {
+	animation-play-state: paused;
+}
+
+#astronaute p:hover {
+	display: block;
+}
+
+footer {
+	width: 100%;
+	background-image: url("../images/footer.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 20px 0;
+}
+
+#navFoot {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#menuFoot {
+	display: flex;
+}
+
+#menuFoot li {
+	width: 100%;
+}
+
+.border {
+	border-right: 1px solid white;
+}
+
+#menuFoot li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	#content {
+		display: none;
+	} 
+} 
+
+/****************************page PRESENTATION*******************************/
+
+#systemeSolaire {
+	width: 30%;
+}
+
+#video {
+	width: 68%;
+	border: 1px solid white;
+
+}
+
+#video h2 {
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	main {
+		flex-direction: column;
+	}
+
+	iframe {
+		width: 100%;
+	}
+}
+
+/****************************page Planètes INTERIEURES*************************/
+
+#animation {
+	width: 30%;
+	margin: 0;
+}
+
+#animation h4 {
+	text-align: center;
+}
+
+#animation ul {
+	width: 30%;
+	margin: 0 auto;
+}
+
+#animation li {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+#animation label {
+	/* display: inline-block; */
+	width: 100px;
+
+}
+
+#animation input {
+	width: 100%;
+	text-align: center;
+	background-color: #808080;
+	color: white;
+	font-weight: bold;
+	border: none;
+	padding: 0;
+}
+
+#planetes1 {
+	width: 100%;
+	height: 500px;
+}
+
+#interieures {
+	width: 68%;
+	height: 500px;
+	position: absolute;
+	border: 1px solid red;
+	/* background-image: url("../images/soleil.png");
+
+	background-image: url("../images/mercure.png");
+	background-image: url("../images/venus.png");
+	background-image: url("../images/terre.png");
+	background-image: url("../images/mars.png"); */
+	
+}
+
+#soleil {
+	width: 288px;
+	height: 288px;
+	position: absolute;
+	background-image: url("../images/soleil.png");
+	background-repeat: no-repeat;
+	/* background-position: left center; */
+	left: 250px;
+	top: 100px;
+	border: 1px solid orange;
+}
+
+#merc {
+	width: 388px; /* =((288/2)+(250-200))*2 */
+	height: 14px;
+	position: absolute;
+	background-image: url("../images/mercure.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 200px;
+	top: 237px; /* =(100+(288/2))-(14/2) */
+	border: 1px solid greenyellow;
+}
+
+.merc {
+animation: rotation 1s linear infinite;
+}
+
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+
+#ven {
+	width: 488px; /* =((288/2)+(250-150))*2 */
+	height: 34px;
+	position: absolute;
+	background-image: url("../images/venus.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 150px;
+	top: 227px; /* =(100+(288/2))-(34/2) */
+	border: 1px solid yellow;
+}
+
+.ven {
+	animation: rotation 2s linear infinite;
+}
+	
+
+#ter {
+	width: 568px; /* =((288/2)+(250-110))*2 */
+	height: 36px;
+	position: absolute;
+	background-image: url("../images/terre.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 110px;
+	top: 226px; /* =(100+(288/2))-(36/2) */
+	border: 1px solid cyan;
+}
+
+.ter {
+	animation: rotation 3s linear infinite;
+}
+	
+
+#mar {
+	width: 738px; /* =((288/2)+(250-25))*2 */
+	height: 19px;
+	position: absolute;
+	background-image: url("../images/mars.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	left: 25px;
+	top: 234px; /* =(100+(288/2))-(19/2) */
+	border: 1px solid violet;
+}
+
+.mar {
+	animation: rotation 4s linear infinite;
+}
+
+
+/****************************page Planètes GEANTES*************************/
+
+#planetes2 {
+	width: 100%;
+	margin: 0;
+}
+
+#planetes2 h4 {
+	width: 100%;
+	text-align: center;
+}
+
+#geantes {
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	padding: 40px;
+}
+
+.quatuor {
+	width: 25%;
+	text-align: center;
+	margin: 0;
+}
+.quatuor:hover {
+	transform: scale(1.2);
+	transition: 2s;
+}
+
+#popup{
+	display: none;
+	position: absolute; 
+	left: 50%;
+	top: 400px;
+	width: 40%;
+	height: 500px;
+	margin: 0 auto;
+	transform: translate(-50%, -50%);
+	background-image: url("../images/ciel.jpg");
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#popup img {
+	width: 40%;
+}
+
+#popup h2 {
+	width: 30%;
+	text-align: center;
+}
+
+#popup #croix {
+	position:absolute;
+	right:0;
+	display:block;
+	width:10%;
+	text-align:center;
+	border:1px solid indigo;
+	cursor:pointer;
+	border-radius:30%;
+}
+
+#popup p {
+	width:100%;
+	border-radius:5%;
+	padding:0.5em;
+	box-shadow:2px 2px 10px black;
+	color:white;
+	font-weight:bold;
+}
+
+
+/****************************page CONTACT*************************/
+
+#formulaire {
+	width: 60%;
+}
+
+#formulaire h4 {
+	text-align: center;
+}
+
+/* #formulaire ul {
+	
+} */
+
+#formuaire li {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#formulaire label:not(.sexe) {
+	display: inline-block;
+	width: 25%;
+}
+
+#formulaire input, #message {
+	border-radius: 5px;
+}
+
+#nom, #prenom, #tel, #email, #date, #fichier, #message {
+	width: 50%;
+	padding-left: 5px;
+}
+
+/********************MAP**********************************/
+
+#contact {
+	cursor: pointer;
+	width: 40%;
+	height: 0;
+}
+
+#contact h2 {
+	text-align: center;
+}
+
+#contact p {
+	text-align: center;
+	margin: 0;
+}
+
+#contact iframe {
+    margin-top: 5%;
+	transform: translateX(110%);
+	transition-duration: 3s;
+}
+
+#contact:hover iframe {
+	transform: translateX(0%);
+}
+
+@media screen and (max-width: 600px) {
+	main {
+		flex-direction: column;
+	}
+
+	iframe {
+		width: 100%;
+	}
+}
+
+/****************************MENU FLEX********************************/
+
+/*
+html {
+font-size: 62.5%;
+margin: 0 auto;
+}
+body {
+font-size: 1.5em;
+}
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.menu {
+
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex; 
+}
+.menu li {
+width: 100%; 
+}
+.menu li a {
+display: block; 
+text-decoration: none;
+text-align: center;
+background-color: #3B4E77;
+color: white;
+padding: 10px 0;
+border-radius: 10px;
+}
+.menu li a:hover {
+background-color: #cc0;
+}
+.menu li a:active {
+background-color: #5F879D;
+}
+.sousmenu {
+display: none; 
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column; 
+}
+.sousmenu li {
+margin-top: 1px;
+}
+.menu li:hover .sousmenu {
+display: block;
+}
+
+*/
